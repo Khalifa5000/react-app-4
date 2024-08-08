@@ -169,14 +169,18 @@ const addCount = () => {
         <button  onClick ={() =>{setTheme("dark")}} style={{marginRight: "26px"}}>Dark</button>
         <button  onClick ={() =>{setTheme("grey")}} style={{marginRight: "26px"}}>Grey</button>
         <button  onClick ={() =>{setTheme("pink")}}>Pink</button>
-        <h2>My name is {name} </h2>
-        <button onClick={ ()=>{ setName("Mohamed Khalifa")} } >Change name</button>
+        
+      <div>
+      <h2  style={{marginTop: "50px"}} >My name is {name} </h2>
+        <button onClick={ ()=>{ setName("Mohamed Khalifa")}}>Change name</button>
         <button onClick={ ()=>{ setName("Mohamed")} } style={{marginLeft: "20px"}} >Reset name</button>
         <button onClick={ ()=>{ setName(()=> name == "Mohamed" ? "Mohamed Khalifa" : "Mohamed")} } style={{marginLeft: "20px"}} >Toggle name</button>
       </div>
 
+      </div>
+
       <div>
-        <h2> My age is {age}</h2>
+        <h2  style={{marginTop:"30px"}}> My age is {age}</h2>
         <button onClick={ changeAge }>Change age</button>
         <button onClick={ ()=> {setAge(43)} } style={{marginLeft:"20px"}}>Reset age</button>
         <button onClick={ ()=> {setAge(age == 43 ? 34 : 43)} } style={{marginLeft:"20px"}}>Toggle age</button>
@@ -184,7 +188,7 @@ const addCount = () => {
 
       <div>
         <h2 style={{marginTop:"30px"}}>{count} </h2>
-        <button onClick={addCount} > Count  </button>
+        <button onClick={addCount}style={{width: "120px"}} > Count  </button>
         <button onClick={()=> {setCount(count - 1)}}  style={{marginLeft:"20px"}}> Subtraction  </button>
         <button onClick={()=> {setCount(0)}}  style={{marginLeft:"20px"}}> Reset count  </button>
       </div>
